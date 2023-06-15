@@ -1,6 +1,9 @@
 <?php
 
-class Spendings {
+namespace App;
+use PDO;
+
+class Spendings{
   private $pdo;
 
   function __construct($dbUserName, $dbPassword, $dbName) {
@@ -22,22 +25,6 @@ class Spendings {
     return $totalSpendingsAmount;
   }
 }
-
-$spendingTracker = new Spendings ("root", "password", "tq_quest");
-$totalSpendingsAmount = $spendingTracker->getTotalSpendingsAmount();
-echo $totalSpendingsAmount;
-
-
-
-
-
-
-
-
-
-
-
-
-
+?>
 
 
